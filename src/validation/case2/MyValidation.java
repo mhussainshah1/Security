@@ -1,4 +1,4 @@
-package validation;
+package validation.case2;
 
 import java.io.Console;
 import java.io.IOException;
@@ -11,10 +11,12 @@ public class MyValidation {
     public static void main(String[] args) throws IOException {
         Console console = System.console();
         String dirName = console.readLine();
-        Path path = Paths.get("c:/data/diets/" + dirName);
-        try (Stream<Path> stream = Files.walk(path)) {
-            stream.filter(p -> p.toString().endsWith(".txt"))
-                    .forEach(System.out::println);
+        if (dirName.equals("mammals") || dirName.equals("birds")) {
+            Path path = Paths.get("c:/data/diets/" + dirName);
+            try (Stream<Path> stream = Files.walk(path)) {
+                stream.filter(p -> p.toString().endsWith(".txt"))
+                        .forEach(System.out::println);
+            }
         }
     }
 }
