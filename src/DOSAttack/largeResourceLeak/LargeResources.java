@@ -1,4 +1,4 @@
-package DOSAttack.resourceLeak;
+package DOSAttack.largeResourceLeak;
 
 import java.io.IOException;
 import java.nio.file.Files;
