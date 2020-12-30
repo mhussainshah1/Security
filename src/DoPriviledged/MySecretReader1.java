@@ -1,6 +1,8 @@
 package DoPriviledged;
 
-import java.security.*;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
+
 public class MySecretReader1 {
     public String getSecret(String magicWord) {
         return AccessController.doPrivileged(
