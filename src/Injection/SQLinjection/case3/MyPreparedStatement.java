@@ -1,4 +1,4 @@
-package SQLinjection.case3;
+package Injection.SQLinjection.case3;
 
 import java.sql.Connection;
 import java.sql.SQLException;

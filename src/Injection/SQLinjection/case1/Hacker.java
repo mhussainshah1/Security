@@ -1,19 +1,19 @@
-package SQLinjection.case2;
+package Injection.SQLinjection.case1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class Hacker {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws Exception {
         String url = "jdbc:derby:zoo;create=true";
         try (Connection conn = DriverManager.getConnection(url)) {
-            var attack = new MyPreparedStatement();
+            var attack = new MyStatement();
+            int opening = attack.getOpening(conn, "monday"); // 10
+            System.out.println(opening);
+
             int evil = attack.getOpening(conn,
                     "monday' OR day IS NOT NULL OR day = 'sunday"); // 9
             System.out.println(evil);
         }
-
-
     }
 }

@@ -1,4 +1,4 @@
-package SQLinjection;
+package Injection.SQLinjection;
 
 import java.sql.*;
 

@@ -1,4 +1,4 @@
-package SQLinjection.case3;
+package Injection.SQLinjection.case2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,8 +10,10 @@ public class Hacker {
         try (Connection conn = DriverManager.getConnection(url)) {
             var attack = new MyPreparedStatement();
             int evil = attack.getOpening(conn,
-                    "monday' OR day IS NOT NULL OR day = 'sunday"); // -1
+                    "monday' OR day IS NOT NULL OR day = 'sunday"); // 9
             System.out.println(evil);
         }
+
+
     }
 }

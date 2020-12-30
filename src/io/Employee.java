@@ -5,7 +5,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Employee implements Serializable {
-    //Black list
+    //White list
+
     @Serial
     private static final ObjectStreamField[] serialPersistentFields = {
             new ObjectStreamField("name", String.class),
@@ -14,8 +15,7 @@ public class Employee implements Serializable {
     private static Map<String, Employee> pool = new ConcurrentHashMap<>();
     private String name;
     private String ssn;
-    //White list
-    private /*transient*/ int age;
+    private /*transient*/ int age;//Black list - do not serialize
 
     // Constructors
     private Employee() {
@@ -81,8 +81,7 @@ public class Employee implements Serializable {
             // New employee not in memory
             pool.put(name, this);
             return this;
-        } else {
-            // Existing user already in memory
+        } else {// Existing user already in memory
             existingEmployee.name = this.name;
             existingEmployee.ssn = this.ssn;
             return existingEmployee;
