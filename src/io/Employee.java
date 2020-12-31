@@ -6,13 +6,13 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class Employee implements Serializable {
     //White list
-
     @Serial
     private static final ObjectStreamField[] serialPersistentFields = {
             new ObjectStreamField("name", String.class),
             new ObjectStreamField("ssn", String.class)
     };
     private static Map<String, Employee> pool = new ConcurrentHashMap<>();
+
     private String name;
     private String ssn;
     private /*transient*/ int age;//Black list - do not serialize

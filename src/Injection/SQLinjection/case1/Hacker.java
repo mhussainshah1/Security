@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class Hacker {
     public static void main(String[] args) throws Exception {
-        String url = "jdbc:derby:zoo;create=true";
+        String url = "jdbc:derby:zoo";
         try (Connection conn = DriverManager.getConnection(url)) {
             var attack = new MyStatement();
             int opening = attack.getOpening(conn, "monday"); // 10

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Hacker {
     public static void main(String[] args) throws SQLException {
-        String url = "jdbc:derby:zoo;create=true";
+        String url = "jdbc:derby:zoo";
         try (Connection conn = DriverManager.getConnection(url)) {
             var attack = new MyPreparedStatement();
             int evil = attack.getOpening(conn,
