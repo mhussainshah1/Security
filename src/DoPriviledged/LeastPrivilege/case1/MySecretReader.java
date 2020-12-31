@@ -1,9 +1,9 @@
-package DoPriviledged;
+package DoPriviledged.LeastPrivilege.case1;
 
 import java.security.AccessController;
 import java.security.PrivilegedAction;
 
-public class MySecretReader1 {
+public class MySecretReader {
     public String getSecret(String magicWord) {
         return AccessController.doPrivileged(
                 new PrivilegedAction<String>() {

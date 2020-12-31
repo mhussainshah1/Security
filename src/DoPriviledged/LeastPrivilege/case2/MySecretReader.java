@@ -1,9 +1,9 @@
-package DoPriviledged;
+package DoPriviledged.LeastPrivilege.case2;
 
 import java.security.*;
 
 public class MySecretReader {
-    private static final String KEY = "secret.option";
+    private static final String KEY = "os.name";//"secret.option";
     public String getSecret() {
         return AccessController.doPrivileged(
                 new PrivilegedAction<String>() {
@@ -11,10 +11,5 @@ public class MySecretReader {
                         return System.getProperty(KEY);
                     }
                 });
-    }
-
-    public static void main(String[] args) {
-        var r = new MySecretReader();
-        System.out.println(r.getSecret());
     }
 }
