@@ -1,4 +1,4 @@
-package DoPriviledged.LeastPrivilege.case1;
+package DoPriviledge.LeastPrivilege.case1;
 
 import java.security.AccessController;
 import java.security.PrivilegedAction;

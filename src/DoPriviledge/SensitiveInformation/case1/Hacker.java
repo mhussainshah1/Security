@@ -1,4 +1,4 @@
-package DoPriviledged.SensitiveInformation.case2;
+package DoPriviledge.SensitiveInformation.case1;
 
 public class Hacker {
     public static void main(String[] args) {

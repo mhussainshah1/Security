@@ -1,4 +1,4 @@
-package DoPriviledged.SensitiveInformation.case1;
+package DoPriviledge.SensitiveInformation.case1;
 
 import java.security.AccessController;
 import java.security.PrivilegedAction;

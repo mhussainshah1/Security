@@ -1,0 +1,4 @@
+grant codebase "file:${mlib.home}/j2Se/home/mlib.jar"
+        {
+            permission java.io.SocketPermission "*", "connect";
+        };

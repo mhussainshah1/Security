@@ -1,4 +1,4 @@
-package DoPriviledged.LeastPrivilege.case2;
+package DoPriviledge.LeastPrivilege.case2;
 
 import java.security.*;
 
